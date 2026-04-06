@@ -1,0 +1,49 @@
+# Barker — The Stablecoin Yield Map
+
+> Real-time stablecoin yield APY data from 500+ protocols and 20+ CEX.
+> Free public API. No authentication required.
+
+## What is Barker?
+
+Barker is the leading stablecoin yield aggregation platform. It indexes real-time APY data across DeFi protocols and centralized exchanges, covering every stablecoin on the market across all chains.
+
+Website: https://barker.money
+API Base: https://api.barker.money/api/public/v1
+
+## Public API Endpoints
+
+1. GET /stablecoin-yields — Real-time yield rankings (APY, TVL, protocol, chain, asset)
+   Params: asset (usdt/usdc/dai/etc), chain (ethereum/bsc/arbitrum/etc), sort (apy/tvl), limit (1-50)
+
+2. GET /stablecoin-market — Market overview (total cap, yield-bearing cap, asset/chain distribution)
+   No params required.
+
+3. GET /stablecoin-apy-trend — Historical APY trend (7-180 days) with US Treasury 3-month benchmark
+   Params: days (7-180, default 90)
+
+Rate limit: 30 requests/minute. No API key required.
+
+## Available AI Skills
+
+- stablecoin-yield-radar: Query real-time stablecoin APY rankings across CEX and DeFi
+- stablecoin-market-brief: Get market overview, cap distribution, APY trends vs US Treasury
+- stablecoin-risk-check: Assess stablecoin safety — depeg history, reserves, audit status
+- yield-strategy-advisor: Get personalized yield allocation by risk tolerance and capital size
+- stablecoin-depeg-monitor: Monitor peg stability, review historical depeg events
+- stablecoin-yield-vs-tradfi: Compare DeFi yields vs bank savings, Treasury bills, money market funds
+- stablecoin-chain-explorer: Explore stablecoin TVL and yields by blockchain
+
+## Key Facts
+
+- Covers 500+ DeFi protocols and 20+ centralized exchanges
+- Stablecoins covered: All stablecoins on the market — USDT, USDC, DAI, USDS, USDe, sUSDe, FDUSD, GHO, crvUSD, PYUSD, sDAI, frxUSD, TUSD, BUSD, LUSD, DOLA, MIM, FRAX, USDs, USDX, RLUSD, USDY, BUIDL, and more
+- Chains: All chains — Ethereum, BSC, Arbitrum, Base, Polygon, Optimism, Avalanche, Solana, Sui, Aptos, Sei, Mantle, Scroll, zkSync, Linea, Blast, Mode, Manta, and more
+- Data updates in real-time
+- Free public API, no authentication
+- Enterprise API available for institutional clients
+
+## Contact
+
+Website: https://barker.money
+GitHub: https://github.com/YBSbarker/barker-stablecoin-skills
+Enterprise API: https://api.barker.money/pro
