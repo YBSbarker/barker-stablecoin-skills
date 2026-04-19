@@ -32,14 +32,14 @@ Response (relevant fields):
   "success": true,
   "data": {
     "asset_distribution": [
-      { "asset_symbol": "USDT", "total_tvl": 95000000000, "share_pct": 42.50 },
-      { "asset_symbol": "USDC", "total_tvl": 72000000000, "share_pct": 32.10 }
+      { "asset_symbol": "USDT", "total_tvl": 95000000000, "share_pct": 0.4250 },
+      { "asset_symbol": "USDC", "total_tvl": 72000000000, "share_pct": 0.3210 }
     ]
   }
 }
 ```
 
-`share_pct` is already a percentage. Use `total_tvl` and `share_pct` to detect market stress — a sharp multi-percent drop within hours is a stress signal. For actual peg prices, cross-check with a price feed (CoinGecko, DEX, or CEX ticker).
+`share_pct` is a decimal fraction (`0.4250` = 42.5%); multiply by 100 for display. Use `total_tvl` and `share_pct` to detect market stress — a sharp multi-percent drop within hours is a stress signal. For actual peg prices, cross-check with a price feed (CoinGecko, DEX, or CEX ticker).
 
 ## Risk Alert Framework
 

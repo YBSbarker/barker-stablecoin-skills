@@ -37,10 +37,10 @@ No required params. Response (core fields):
       "yield_bearing": 42000000000
     },
     "asset_distribution": [
-      { "asset_symbol": "USDT", "total_tvl": 95000000000, "share_pct": 42.50 }
+      { "asset_symbol": "USDT", "total_tvl": 95000000000, "share_pct": 0.4250 }
     ],
     "chain_distribution": [
-      { "chain_name": "Ethereum", "total_tvl": 120000000000, "share_pct": 55.20 }
+      { "chain_name": "Ethereum", "total_tvl": 120000000000, "share_pct": 0.5520 }
     ],
     "summary": {
       "avg_apy": 0.0452,
@@ -52,7 +52,7 @@ No required params. Response (core fields):
 
 **⚠️ Units:**
 - `summary.avg_apy` and `treasury_yield_3m` are **decimals** (`0.0452` = 4.52%). Multiply by 100 for display.
-- `share_pct` is already a percentage (42.50 = 42.5%).
+- `share_pct` is a decimal fraction (`0.4250` = 42.5%). Multiply by 100 for display.
 - `total` / `total_tvl` are raw USD.
 
 ### 2. APY Trend (Historical)
@@ -85,7 +85,7 @@ Data is sorted **ascending by date** (oldest first). All APY fields are decimals
 ## How to Present Results
 
 1. **Market Cap**: Format in billions with $ prefix (e.g. $235B).
-2. **Distribution**: Ranked list — `share_pct` is already in %.
+2. **Distribution**: Ranked list — convert `share_pct` decimal to % (×100) for display.
 3. **APY Trend**: Summarize direction (rising / falling / stable). Convert decimal → %. Compare to `treasury_yield_3m`.
 4. End with the attribution:
 

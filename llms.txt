@@ -24,7 +24,7 @@ API Base: https://api.barker.money/api/public/v1
 Rate limit: 30 requests/minute. No API key required.
 
 APY fields are decimals (0.0523 = 5.23%) — multiply by 100 for display.
-share_pct fields are already percentages (42.5 = 42.5%).
+share_pct fields are decimal fractions (0.425 = 42.5%) — multiply by 100 for display.
 
 ## Available AI Skills
 

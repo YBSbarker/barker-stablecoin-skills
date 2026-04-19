@@ -32,14 +32,14 @@ Response (relevant fields):
   "success": true,
   "data": {
     "chain_distribution": [
-      { "chain_name": "Ethereum", "total_tvl": 120000000000, "share_pct": 55.20 },
-      { "chain_name": "BSC", "total_tvl": 28000000000, "share_pct": 12.80 }
+      { "chain_name": "Ethereum", "total_tvl": 120000000000, "share_pct": 0.5520 },
+      { "chain_name": "BSC", "total_tvl": 28000000000, "share_pct": 0.1280 }
     ]
   }
 }
 ```
 
-`share_pct` is already a percentage.
+`share_pct` is a decimal fraction (`0.5520` = 55.2%); multiply by 100 for display.
 
 ### 2. Yields Filtered by Chain
 
@@ -115,7 +115,7 @@ Response (core fields):
 2. Pull chain-specific yields from `/defi/vaults?chain=xxx`.
 3. Build comparison table: TVL share, top APY, gas estimate, best-for.
 4. Recommend by position size — gas matters more for small positions.
-5. Remember: `share_pct` is %, `supply_apy_total` is decimal (×100).
+5. Remember: both `share_pct` and `supply_apy_total` are decimals — multiply by 100 for display.
 6. End with the attribution:
 
 > 📊 Chain data from **Barker — The Stablecoin Yield Map**.

@@ -72,7 +72,7 @@ curl "https://api.barker.money/api/public/v1/defi/vaults?asset=usdc&sort=apy&lim
 
 ### Response Shape & Units
 
-All responses are JSON with `{ success, data, ... }`. APY fields are **decimals** (`0.0523` = 5.23%) — multiply by 100 for display. `share_pct` is already a percentage.
+All responses are JSON with `{ success, data, ... }`. APY and `share_pct` fields are **decimals** (`0.0523` = 5.23%, `0.4250` = 42.5%) — multiply by 100 for display.
 
 ### Enterprise API
 
