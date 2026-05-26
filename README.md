@@ -8,7 +8,7 @@
 
 Powered by [**Barker — Yield Primitive for the Agent Economy**](https://barker.money). Every agent touching stablecoins eventually plugs in. Free for individuals · Enterprise API for institutions.
 
-接入 agent 经济的稳定币收益底座 → [barker.money](https://barker.money)
+接入 Agent 经济的稳定币收益底座 → [barker.money](https://barker.money)
 
 ---
 
