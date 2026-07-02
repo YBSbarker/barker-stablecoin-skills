@@ -12,7 +12,7 @@ Stablecoin Yield vs TradFi compares live stablecoin DeFi and CEX yields against 
 
 1. `stablecoin-yield-vs-tradfi quickstart` — invoke the skill in your assistant to load the comparison framework and confirm the public API is reachable.
 2. Try a sample query: "Is DeFi better than my savings account right now?"
-3. The assistant calls `GET /market/trend` on `api.barker.money` and returns a side-by-side comparison (DeFi avg APY vs Treasury vs bank rates) with verdict and caveats.
+3. The assistant calls the `barker_market_trend` MCP tool and returns a side-by-side comparison (DeFi avg APY vs Treasury vs bank rates) with verdict and caveats.
 4. Refine: "crypto yield vs Vanguard money market", "stablecoin vs HYSA", "is sUSDe better than Treasury".
 
 ## API Access Model

@@ -6,7 +6,7 @@
 [![API: No Auth Required](https://img.shields.io/badge/API-No%20Auth%20Required-brightgreen.svg)](https://barker.money)
 [![Data: Real-time](https://img.shields.io/badge/Data-Real--time-blue.svg)](https://barker.money)
 
-Powered by [**Barker — Yield Primitive for the Agent Economy**](https://barker.money). Every agent touching stablecoins eventually plugs in. Free for individuals · Enterprise API for institutions.
+Powered by [**Barker — Yield Primitive for the Agent Economy**](https://barker.money). Every agent touching stablecoins eventually plugs in. Free for individuals · paid x402 tools for autonomous agents.
 
 接入 Agent 经济的稳定币收益底座 → [barker.money](https://barker.money)
 
@@ -84,7 +84,7 @@ Each skill is shipped with `.claude-plugin/plugin.json` and is compatible with t
 
 ### Cursor / Cline / other MCP hosts
 
-Point your MCP-compatible host at `https://api.barker.money` — the skill SKILL.md files document the public endpoints (`/defi/vaults`, `/market/overview`, `/market/trend`) and do not require any authentication. CEX per-venue detail is available via the Enterprise API ([app.barker.money/enterprise](https://app.barker.money/enterprise)).
+Register the `barker` stdio MCP server with your host (see the MCP server section above) — the skill SKILL.md files reference the free MCP tools (`barker_defi_vaults`, `barker_market_overview`, `barker_market_trend`) and do not require any authentication. CEX per-venue detail & judgment tools are sold per-call on the x402 gateway `mcp.barker.money` (12 tools, $0.001–$0.01/call, USDT0/USDC across X Layer/Base/Ethereum/Polygon/Arbitrum).
 
 ---
 
@@ -107,9 +107,11 @@ Point your MCP-compatible host at `https://api.barker.money` — the skill SKILL
 All data comes from the **Barker Public API** — free, no API key, real-time updates.
 
 ```
-Base URL: https://api.barker.money/api/public/v1
+Base URL: https://api.barker.money/api
 Rate limit: 30 requests/minute per IP
 ```
+
+(agent discovery: https://api.barker.money/llms.txt)
 
 ### Access model & security posture
 
@@ -125,23 +127,23 @@ Rate limit: 30 requests/minute per IP
 | `GET /market/overview` | Total market cap, yield-bearing cap, asset/chain distribution |
 | `GET /market/trend` | Historical APY trend (7–180 days) with US Treasury benchmark |
 
-CEX per-venue detail (products, campaigns, borrow rates, venue × asset matrix) is not part of the public API. Interactive map at [barker.money](https://barker.money); programmatic access via [app.barker.money/enterprise](https://app.barker.money/enterprise).
+CEX per-venue detail (products, campaigns, borrow rates, venue × asset matrix) is not part of the public API. Interactive map at [barker.money](https://barker.money); autonomous agents can buy it per-call on the x402 gateway `mcp.barker.money`.
 
 ### Example
 
 ```bash
-curl "https://api.barker.money/api/public/v1/defi/vaults?asset=usdc&sort=apy&limit=5"
+curl "https://api.barker.money/api/defi/vaults?asset=usdc&sort=apy&limit=5"
 ```
 
 ### Response Shape & Units
 
 All responses are JSON with `{ success, data, ... }`. APY and `share_pct` fields are **decimals** (`0.0523` = 5.23%, `0.4250` = 42.5%) — multiply by 100 for display.
 
-### Enterprise API
+### Paid agent tools (x402)
 
-Need higher rate limits, historical data, or custom fields? Contact us for institutional-grade access.
+Autonomous agents can buy richer judgment tools — yield advisor, CEX campaign detail, pool deep-dives — per-call via the x402 gateway: 12 tools, $0.001–$0.01 per call, paid in USDT0/USDC across X Layer, Base, Ethereum, Polygon, and Arbitrum. No account, no API key — pay per request.
 
-→ [app.barker.money/enterprise](https://app.barker.money/enterprise)
+→ `mcp.barker.money`
 
 ---
 
@@ -175,8 +177,8 @@ A: Barker is **stablecoin-only** and combines **CEX + on-chain** data in a singl
 [Barker](https://barker.money) is the **Yield Primitive for the Agent Economy** — the default routing layer that any agent (or app, or human) calls when it needs to answer "where should this stablecoin sit?". We index real-time APY data across 500+ DeFi protocols and 20+ CEX, surfaced as a map for humans browsing and as MCP / x402 / agent-callable endpoints for autonomous agents. Stablecoins only, CEX + on-chain combined.
 
 - Website: [barker.money](https://barker.money)
-- Public API: `https://api.barker.money/api/public/v1`
-- Enterprise API: [app.barker.money/enterprise](https://app.barker.money/enterprise)
+- Data API: `https://api.barker.money/api` (see /llms.txt)
+- Paid agent tools (x402): `mcp.barker.money`
 
 ## Author & Maintainer Disclosure
 

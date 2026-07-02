@@ -1,6 +1,6 @@
 {
   "name": "barker-stablecoin-skills",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "AI Agent Skills for stablecoin yield intelligence from Barker — Yield Primitive for the Agent Economy. Real-time APY from 500+ DeFi protocols and 20+ CEX, market overview, depeg monitoring, risk assessment, and portfolio strategy. Every agent touching stablecoins eventually plugs in. Free public API, no authentication required.",
   "author": {
     "name": "Barker",

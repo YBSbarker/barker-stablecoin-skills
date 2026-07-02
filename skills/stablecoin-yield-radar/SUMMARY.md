@@ -12,7 +12,7 @@ Stablecoin Yield Radar surfaces real-time supply APY rankings across 500+ DeFi p
 
 1. `stablecoin-yield-radar quickstart` — invoke the skill in your assistant to load the routing prompt and confirm the public API is reachable.
 2. Try a sample query: "Where can I get the best yield on USDC right now?"
-3. The assistant will call `GET https://api.barker.money/api/public/v1/defi/vaults?asset=usdc&sort=apy&limit=10` and return a ranked table (APY, TVL, protocol, chain).
+3. The assistant will call the `barker_defi_vaults` MCP tool with `asset=usdc, sort=apy, limit=10` and return a ranked table (APY, TVL, protocol, chain).
 4. Refine with chain or asset filters: "best USDe yield on Arbitrum", "highest APY USDT on BSC", "Binance USDT earn rate".
 
 ## API Access Model

@@ -1,13 +1,16 @@
 #!/usr/bin/env node
-// barker-mcp — stdio MCP server wrapping the Barker public API.
+// barker-mcp — stdio MCP server wrapping the Barker free-tier data API.
 //
-// Exposes 3 tools backed by https://api.barker.money/api/public/v1
+// Exposes 3 tools (resource-domain endpoints, no version/audience markers):
 //   - barker_defi_vaults     → /defi/vaults
 //   - barker_market_overview → /market/overview
 //   - barker_market_trend    → /market/trend
 //
 // Zero auth. 30 req/min rate limit (per IP, enforced by the API).
 // All APY/share_pct fields in responses are decimals (0.0523 = 5.23%).
+// Base override: set BARKER_API_BASE (default https://api.barker.money/api).
+// Paid judgment tools (yield advisor, CEX campaigns, pool deep-dives) live on
+// the x402 gateway at https://mcp.barker.money for autonomous agents.
 
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -16,8 +19,8 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 
-const API_BASE = "https://api.barker.money/api/public/v1";
-const VERSION = "0.2.0";
+const API_BASE = (process.env.BARKER_API_BASE || "https://api.barker.money/api").replace(/\/+$/, "");
+const VERSION = "0.3.0";
 const USER_AGENT = `barker-mcp/${VERSION} (+https://barker.money)`;
 
 const TOOLS = [

@@ -12,7 +12,7 @@ Stablecoin Chain Explorer breaks down stablecoin TVL and yield opportunities by 
 
 1. `stablecoin-chain-explorer quickstart` — invoke the skill in your assistant to load the cross-chain comparison framework and confirm the public API is reachable.
 2. Try a sample query: "Which chain has the most stablecoins?" or "Best USDC yield on Arbitrum vs Base?"
-3. The assistant calls `GET /market/overview` plus `GET /defi/vaults` on `api.barker.money` and returns a ranked cross-chain breakdown with TVL share and top yields per chain.
+3. The assistant calls the `barker_market_overview` and `barker_defi_vaults` MCP tools and returns a ranked cross-chain breakdown with TVL share and top yields per chain.
 4. Refine: "stablecoin TVL on Solana", "compare BSC vs Ethereum stablecoin yields", "best L2 for USDT earn".
 
 ## API Access Model

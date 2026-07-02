@@ -12,7 +12,7 @@ Stablecoin Depeg Monitor tracks live peg stability for major stablecoins and sur
 
 1. `stablecoin-depeg-monitor quickstart` — invoke the skill in your assistant to load the depeg knowledge base and confirm the public API is reachable.
 2. Try a sample query: "Is USDe holding its peg right now?" or "Show me USDC's depeg history."
-3. The assistant calls `GET /market/overview` on `api.barker.money` for live signals and returns a peg-status report with historical context.
+3. The assistant calls the `barker_market_overview` MCP tool for live signals and returns a peg-status report with historical context.
 4. Refine: "biggest stablecoin depegs in 2025", "is my USDT safe right now", "compare USDe vs FDUSD peg stability".
 
 ## API Access Model

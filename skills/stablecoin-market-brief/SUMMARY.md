@@ -12,7 +12,7 @@ Stablecoin Market Brief returns a real-time snapshot of the stablecoin market: t
 
 1. `stablecoin-market-brief quickstart` — invoke the skill in your assistant to load the routing prompt and confirm the public API is reachable.
 2. Try a sample query: "What does the stablecoin market look like right now?"
-3. The assistant will call `GET /market/overview` and `GET /market/trend?days=30` on `api.barker.money` and return a formatted snapshot (market cap, asset/chain distribution, APY vs Treasury).
+3. The assistant calls the `barker_market_overview` and `barker_market_trend` (days=30) MCP tools and returns a formatted snapshot (market cap, asset/chain distribution, APY vs Treasury).
 4. Refine: "stablecoin market trend over 90 days", "USDT vs USDC market share", "yield-bearing stablecoin cap".
 
 ## API Access Model
