@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 // barker-mcp — stdio MCP server wrapping the Barker free-tier data API.
 //
-// Exposes 3 tools (resource-domain endpoints, no version/audience markers):
-//   - barker_defi_vaults     → /defi/vaults
-//   - barker_market_overview → /market/overview
-//   - barker_market_trend    → /market/trend
+// Exposes 4 tools (resource-domain endpoints, no version/audience markers):
+//   - barker_defi_vaults          → /defi/vaults
+//   - barker_market_overview      → /market/overview
+//   - barker_market_trend         → /market/trend
+//   - barker_agent_payment_stats  → /agent-payments/{summary|trend|leaderboard}
 //
 // Zero auth. 30 req/min rate limit (per IP, enforced by the API).
 // All APY/share_pct fields in responses are decimals (0.0523 = 5.23%).
@@ -20,7 +21,7 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 
 const API_BASE = (process.env.BARKER_API_BASE || "https://api.barker.money/api").replace(/\/+$/, "");
-const VERSION = "0.3.0";
+const VERSION = "0.4.0";
 const USER_AGENT = `barker-mcp/${VERSION} (+https://barker.money)`;
 
 const TOOLS = [
@@ -88,6 +89,46 @@ const TOOLS = [
       additionalProperties: false,
     },
   },
+  {
+    name: "barker_agent_payment_stats",
+    description:
+      "Agent-economy payment metrics from Barker's cross-protocol index. x402 (Base) is on-chain verifiable; " +
+      "Virtuals ACP, Google AP2, Stripe-Tempo MPP, OKX MPP, and Mastercard AP4M are self-reported claims. " +
+      "Separates real vs nominal volume by filtering out wash/noise sellers (avg_tx_usd < $0.02 with a very high tx-per-buyer ratio). " +
+      "Three views: 'summary' (hero KPIs + cross-protocol comparison table), 'trend' (daily tx / nominal & real volume / buyers), " +
+      "'leaderboard' (top x402 sellers/endpoints by revenue). " +
+      "Use for 'x402 volume', 'agent payment stats', 'agent economy metrics', 'how big is x402', 'top x402 sellers', 'real vs nominal agent GMV', '智能体支付', 'x402 交易量'. " +
+      "All *_share_pct and noise_share_pct fields are percentages (77.0 = 77%); volume fields are USD.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        view: {
+          type: "string",
+          enum: ["summary", "trend", "leaderboard"],
+          description:
+            "Which view — 'summary' (default): hero KPIs + protocol comparison; 'trend': daily time series; 'leaderboard': top sellers.",
+        },
+        days: {
+          type: "integer",
+          minimum: 1,
+          maximum: 90,
+          description: "Trend window in days (view=trend only) — default 30, max 90",
+        },
+        limit: {
+          type: "integer",
+          minimum: 1,
+          maximum: 100,
+          description: "Row count (view=leaderboard only) — default 20, max 100",
+        },
+        sort: {
+          type: "string",
+          enum: ["volume", "tx"],
+          description: "Leaderboard sort key (view=leaderboard only) — 'volume' (default) or 'tx'",
+        },
+      },
+      additionalProperties: false,
+    },
+  },
 ];
 
 async function callBarker(path, params) {
@@ -132,6 +173,20 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
       case "barker_market_trend":
         body = await callBarker("/market/trend", args);
         break;
+      case "barker_agent_payment_stats": {
+        const view = args.view || "summary";
+        if (view === "trend") {
+          body = await callBarker("/agent-payments/trend", { days: args.days });
+        } else if (view === "leaderboard") {
+          body = await callBarker("/agent-payments/leaderboard", {
+            limit: args.limit,
+            sort: args.sort,
+          });
+        } else {
+          body = await callBarker("/agent-payments/summary", {});
+        }
+        break;
+      }
       default:
         return {
           content: [{ type: "text", text: `Error: unknown tool '${name}'` }],
