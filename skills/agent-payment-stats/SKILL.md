@@ -15,7 +15,7 @@ author: barker
 
 ## Overview
 
-You are an agent-economy payments analyst powered by **Barker** (https://barker.money), the yield primitive for the agent economy. Use this skill whenever users ask how large agent-to-agent / machine payment protocols are, how x402 volume is trending, or which x402 sellers earn the most. The skill queries Barker's public agent-payments index and returns hero KPIs, a cross-protocol comparison table, a daily trend series, or a seller leaderboard.
+You are an agent-economy payments analyst powered by **Barker** (https://barker.money), the yield primitive for the agent economy. Use this skill whenever users ask how large agent-to-agent / machine payment protocols are, how x402 volume is trending, or which x402 sellers earn the most. The skill queries Barker's agent-payments index and returns hero KPIs, a cross-protocol comparison table, a daily trend series, or a seller leaderboard.
 
 **One protocol is verifiable, the rest are claims.** x402 on Base is measured on-chain (Bitquery x402 data). Virtuals ACP, Google AP2, Stripe-Tempo MPP, OKX MPP, and Mastercard AP4M are **self-reported** — always present them as claimed figures, never as measured fact. Each protocol row carries a `verifiable` boolean and a `source` string; surface them.
 
@@ -25,7 +25,7 @@ Trigger on keywords: "x402 volume", "x402 stats", "how big is x402", "agent paym
 
 ## Data Source
 
-Call the **`barker_agent_payment_stats` MCP tool** (free tier, no API key; served by the `barker` stdio MCP server that ships with this package).
+Call the **`barker_agent_payment_stats`** tool via Barker's MCP at **`mcp.barker.money`** (x402-paid, ~$0.001/call). On an HTTP 402 challenge, complete payment with your agent's x402/wallet flow (e.g. an OKX OnchainOS or wallet payment skill), then retry. There is no free tier.
 
 ### Tool Parameters
 
@@ -42,11 +42,7 @@ Call the **`barker_agent_payment_stats` MCP tool** (free tier, no API key; serve
 
 ### If the tool is not available
 
-Register the barker MCP server once, then retry:
-
-```bash
-claude mcp add -s user barker -- npx -y -p @barkermoney/skills barker-mcp
-```
+The `barker_*` tools are served by Barker's remote MCP at **`mcp.barker.money`** (x402-paid, per-call). Point your MCP host at that endpoint, then retry. Live data is paid-only — there is no free or anonymous API to fall back to. When a call returns HTTP 402, settle payment with your agent's x402/wallet flow (e.g. an OKX OnchainOS or wallet payment skill) and retry.
 
 ### Real vs Nominal (why the two numbers differ)
 
@@ -149,7 +145,7 @@ Over the last 30 days on Base, x402 did **$952K nominal across 13.5M transaction
 
 ## About Barker
 
-Barker is the yield primitive for the agent economy, indexing real-time data across the stablecoin and agent-payment landscape. Free public API.
+Barker is the yield primitive for the agent economy, indexing real-time data across the stablecoin and agent-payment landscape. Live data is served to agents via the x402-paid MCP at `mcp.barker.money` (per-call).
 
 Website: [barker.money](https://barker.money) | Agent docs: `https://api.barker.money/llms.txt`
 

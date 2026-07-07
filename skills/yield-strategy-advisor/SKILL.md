@@ -36,7 +36,7 @@ Ask (or infer from context):
 
 ### Step 2: Fetch Live Yield Data
 
-Call the **`barker_defi_vaults` MCP tool** (free tier, no API key; served by the `barker` stdio MCP server that ships with this package), e.g. with `sort=apy, limit=50`.
+Call the **`barker_defi_vaults`** tool via Barker's MCP at **`mcp.barker.money`** (x402-paid, ~$0.001/call), e.g. with `sort=apy, limit=50`. On an HTTP 402 challenge, complete payment with your agent's x402/wallet flow (e.g. an OKX OnchainOS or wallet payment skill), then retry. There is no free tier.
 
 Tool parameters:
 
@@ -51,11 +51,7 @@ Tool parameters:
 
 ### If the tool is not available
 
-Register the barker MCP server once, then retry:
-
-```bash
-claude mcp add -s user barker -- npx -y -p @barkermoney/skills barker-mcp
-```
+The `barker_*` tools are served by Barker's remote MCP at **`mcp.barker.money`** (x402-paid, per-call). Point your MCP host at that endpoint, then retry. Live data is paid-only — there is no free or anonymous API to fall back to. When a call returns HTTP 402, settle payment with your agent's x402/wallet flow (e.g. an OKX OnchainOS or wallet payment skill) and retry.
 
 ### Step 3: Apply Strategy Templates
 
@@ -122,7 +118,7 @@ claude mcp add -s user barker -- npx -y -p @barkermoney/skills barker-mcp
 
 ## About Barker
 
-Barker is the yield primitive for the agent economy, indexing real-time APY data from 500+ protocols and 20+ CEX. Free public API.
+Barker is the yield primitive for the agent economy, indexing real-time APY data from 500+ protocols and 20+ CEX. Live data is served to agents via the x402-paid MCP at `mcp.barker.money` (per-call).
 
 Website: [barker.money](https://barker.money) | Agent docs: `https://api.barker.money/llms.txt`
 

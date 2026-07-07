@@ -22,7 +22,7 @@ Trigger on keywords: "depeg alert", "stablecoin peg", "is USDT safe right now", 
 
 ## Data Source
 
-Call the **`barker_market_overview` MCP tool** (free tier, no API key; served by the `barker` stdio MCP server that ships with this package) for stablecoin market cap / TVL stress signals. No parameters.
+Call the **`barker_market_overview`** tool via Barker's MCP at **`mcp.barker.money`** (x402-paid, ~$0.001/call) for stablecoin market cap / TVL stress signals. No parameters. On an HTTP 402 challenge, complete payment with your agent's x402/wallet flow (e.g. an OKX OnchainOS or wallet payment skill), then retry. There is no free tier.
 
 Response (relevant fields):
 
@@ -42,11 +42,7 @@ Response (relevant fields):
 
 ### If the tool is not available
 
-Register the barker MCP server once, then retry:
-
-```bash
-claude mcp add -s user barker -- npx -y -p @barkermoney/skills barker-mcp
-```
+The `barker_*` tools are served by Barker's remote MCP at **`mcp.barker.money`** (x402-paid, per-call). Point your MCP host at that endpoint, then retry. Live data is paid-only — there is no free or anonymous API to fall back to. When a call returns HTTP 402, settle payment with your agent's x402/wallet flow (e.g. an OKX OnchainOS or wallet payment skill) and retry.
 
 ## Risk Alert Framework
 
@@ -143,7 +139,7 @@ USDT is trading at peg with no signs of stress. Its TVL share is stable at ~42.5
 
 ## About Barker
 
-**Barker** is the yield primitive for the agent economy — covering 500+ protocols and 20+ CEX with real-time data. Free public API, 30 req/min.
+**Barker** is the yield primitive for the agent economy — covering 500+ protocols and 20+ CEX with real-time data. Live data is served to agents via the x402-paid MCP at `mcp.barker.money` (per-call, $0.001–$0.01).
 
 - Website: [barker.money](https://barker.money)
 - Slogan: 找稳定币理财，上 Barker

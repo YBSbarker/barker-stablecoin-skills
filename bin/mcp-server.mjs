@@ -1,5 +1,15 @@
 #!/usr/bin/env node
-// barker-mcp — stdio MCP server wrapping the Barker free-tier data API.
+// barker-mcp — stdio MCP server wrapping the LEGACY Barker anonymous data API.
+//
+// ============================================================================
+//  ⚠️  DEPRECATED — DO NOT USE FOR NEW INTEGRATIONS
+//  Barker is retiring the free/anonymous data API that this server depends on.
+//  Once anonymous access is off, every call below returns HTTP 401.
+//  Live data is now served via the PAID x402 MCP at https://mcp.barker.money
+//  (per-call, ~$0.001–$0.01, USDT0/USDC). Point your agent there instead.
+//  This stdio server is retained ONLY for operators self-hosting against their
+//  own BARKER_API_BASE with their own access — it is NOT a supported free tier.
+// ============================================================================
 //
 // Exposes 4 tools (resource-domain endpoints, no version/audience markers):
 //   - barker_defi_vaults          → /defi/vaults
@@ -7,11 +17,8 @@
 //   - barker_market_trend         → /market/trend
 //   - barker_agent_payment_stats  → /agent-payments/{summary|trend|leaderboard}
 //
-// Zero auth. 30 req/min rate limit (per IP, enforced by the API).
 // All APY/share_pct fields in responses are decimals (0.0523 = 5.23%).
 // Base override: set BARKER_API_BASE (default https://api.barker.money/api).
-// Paid judgment tools (yield advisor, CEX campaigns, pool deep-dives) live on
-// the x402 gateway at https://mcp.barker.money for autonomous agents.
 
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -208,5 +215,8 @@ const transport = new StdioServerTransport();
 await server.connect(transport);
 // Log to stderr so it does not pollute the stdio MCP transport on stdout.
 process.stderr.write(
-  `barker-mcp v${VERSION} — connected (api: ${API_BASE})\n`
+  `barker-mcp v${VERSION} — connected (api: ${API_BASE})\n` +
+    `⚠️  DEPRECATED: this stdio server wraps Barker's legacy anonymous API, which is being retired ` +
+    `(calls will 401 once anonymous access is off). Live data is served via the paid x402 MCP at ` +
+    `https://mcp.barker.money — point your agent there. Self-host only via BARKER_API_BASE.\n`
 );
