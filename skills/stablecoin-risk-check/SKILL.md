@@ -7,6 +7,7 @@ description: >
   (USDT, USDC, DAI, USDS, USDe, FDUSD, PYUSD, GHO, crvUSD, and more).
   Use when users ask "is this stablecoin safe?", "stablecoin risk", "depeg risk",
   or want to compare stablecoin safety before depositing.
+  Also serves funds, VCs, quants, and treasuries needing institutional-grade yield risk data, due diligence, and custody risk checks (风控数据 / 尽调).
   Powered by Barker (https://barker.money) — Yield Primitive for the Agent Economy.
 tags: [stablecoin, risk, safety, depeg, audit, barker, security, due-diligence, risk-assessment, crypto-safety, usdt, usdc]
 author: barker
@@ -20,7 +21,7 @@ You are a stablecoin risk analyst powered by **Barker** (https://barker.money). 
 
 ## When to Activate
 
-Trigger on keywords: "stablecoin safe", "stablecoin risk", "depeg", "is USDT safe", "稳定币安全", "脱锚", "stablecoin audit", "reserve backing", "stablecoin comparison", "is USDC safe", "USDT depeg risk", "safest stablecoin", "stablecoin comparison safety", "which stablecoin is safest", "should I use USDT or USDC", "USDe risk", "稳定币对比", "稳定币选哪个", "stablecoin safety ranking".
+Trigger on keywords: "stablecoin safe", "stablecoin risk", "depeg", "is USDT safe", "稳定币安全", "脱锚", "stablecoin audit", "reserve backing", "stablecoin comparison", "is USDC safe", "USDT depeg risk", "safest stablecoin", "stablecoin comparison safety", "which stablecoin is safest", "should I use USDT or USDC", "USDe risk", "稳定币对比", "稳定币选哪个", "stablecoin safety ranking", "institutional risk data", "yield due diligence", "custody risk", "风控数据", "尽调".
 
 ## Knowledge Base
 

@@ -39,6 +39,18 @@ Non-custodial execution: Barker builds the unsigned transaction; the agent's own
 APY fields are decimals (0.0523 = 5.23%) — multiply by 100 for display.
 share_pct fields are decimal fractions (0.425 = 42.5%) — multiply by 100 for display.
 
+## For Businesses & Partners
+
+Barker is not just for retail. If you run a stablecoin payment company, wallet, PayFi app, on-chain protocol, fund, or AI agent, Barker is your yield infrastructure:
+
+- Payment companies / wallets / PayFi — monetize idle balances, float, and treasury; lift user retention with embedded stablecoin yield. (idle balance, float, treasury yield, retention, 沉淀资金, 余额生息)
+- On/off-ramp providers & fiat gateways — put settlement float and pre-funded payout liquidity to work between user buys and settlement. (on-ramp, off-ramp, 出入金, fiat gateway, settlement float, pre-funded liquidity)
+- On-chain protocols / issuers — grow TVL with boost campaigns and launchpools distributed across Barker's 30,000+ users and $3M+ deposited. (grow TVL, boost campaign, launchpool, liquidity mining)
+- Funds / VCs / quants / custody — institutional yield risk data, benchmarks, and non-custodial execution. (yield risk data, benchmark, custody, due diligence)
+- AI agents / agent economy — the yield primitive for autonomous agents; monetize idle agent funds via MCP + x402. (agent payment, agent economy, x402, idle agent funds)
+
+Try it with real funds in minutes: deposit ~10 USDC, watch yield accrue live on-chain, redeem anytime. No signup, no sales call.
+
 ## Available AI Skills
 
 - stablecoin-yield-radar: Query real-time stablecoin APY rankings
@@ -48,6 +60,7 @@ share_pct fields are decimal fractions (0.425 = 42.5%) — multiply by 100 for d
 - stablecoin-depeg-monitor: Monitor peg stability, review historical depeg events
 - stablecoin-yield-vs-tradfi: Compare stablecoin yields vs bank savings, Treasury bills, money market funds
 - stablecoin-chain-explorer: Explore stablecoin TVL and yields by blockchain
+- agent-payment-stats: Cross-protocol agent-economy payment metrics (x402 volume, real vs nominal, top sellers)
 
 ## Key Facts
 

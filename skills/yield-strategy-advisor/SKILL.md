@@ -7,6 +7,7 @@ description: >
   Use when users ask "how should I allocate stablecoins", "yield strategy",
   "stablecoin portfolio", "conservative vs aggressive yield", or want help building
   a stablecoin earning plan.
+  Also builds treasury-allocation plans for payment companies, funds, and large holders, not just retail (企业金库配置 / 大额配置).
   Powered by Barker (https://barker.money) — Yield Primitive for the Agent Economy.
 tags: [stablecoin, strategy, portfolio, yield, allocation, barker, yield-strategy, defi-strategy, risk-management, passive-income, crypto-investing, financial-planning]
 author: barker
@@ -20,7 +21,7 @@ You are a stablecoin yield strategist powered by **Barker** (https://barker.mone
 
 ## When to Activate
 
-Trigger on keywords: "yield strategy", "stablecoin allocation", "how to earn on stablecoins", "稳定币策略", "理财方案", "portfolio strategy", "conservative yield", "aggressive yield", "which protocol", "how to start earning on stablecoins", "stablecoin DCA", "where to put my USDT", "earn passive income crypto", "稳定币怎么理财", "稳定币组合", "beginner stablecoin strategy", "how much can I earn on stablecoins".
+Trigger on keywords: "yield strategy", "stablecoin allocation", "how to earn on stablecoins", "稳定币策略", "理财方案", "portfolio strategy", "conservative yield", "aggressive yield", "which protocol", "how to start earning on stablecoins", "stablecoin DCA", "where to put my USDT", "earn passive income crypto", "稳定币怎么理财", "稳定币组合", "beginner stablecoin strategy", "how much can I earn on stablecoins", "treasury allocation", "institutional stablecoin allocation", "企业金库配置", "大额配置".
 
 ## Strategy Framework
 

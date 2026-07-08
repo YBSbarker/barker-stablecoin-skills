@@ -1,7 +1,7 @@
 {
   "name": "agent-payment-stats",
   "version": "0.1.0",
-  "description": "Agent-economy payment metrics from Barker: x402 (Base) on-chain volume plus self-reported ACP / AP2 / MPP / AP4M claims, with real-vs-nominal noise filtering, daily trends, and a top-seller leaderboard.",
+  "description": "Agent-economy payment metrics from Barker: x402 (Base) on-chain volume plus self-reported ACP / AP2 / MPP / AP4M claims, with real-vs-nominal noise filtering, daily trends, and a top-seller leaderboard. Also connects agent-payment flows to Barker's yield primitive — where agents park idle funds.",
   "author": {
     "name": "Barker",
     "github": "YBSbarker",

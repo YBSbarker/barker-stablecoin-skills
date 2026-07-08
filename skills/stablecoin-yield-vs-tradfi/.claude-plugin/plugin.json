@@ -1,7 +1,7 @@
 {
   "name": "stablecoin-yield-vs-tradfi",
   "version": "0.1.0",
-  "description": "Compare stablecoin yields against TradFi benchmarks - bank savings, money market funds, and US Treasury bills. Real-time crypto yields plus TradFi rates.",
+  "description": "Compare stablecoin yields against TradFi benchmarks - bank savings, money market funds, and US Treasury bills. Real-time crypto yields plus TradFi rates. Also for company CFOs and treasuries weighing idle-cash yield vs bank deposits.",
   "author": {
     "name": "Barker",
     "github": "YBSbarker",

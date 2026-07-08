@@ -1,7 +1,7 @@
 {
   "name": "yield-strategy-advisor",
   "version": "0.1.0",
-  "description": "Stablecoin yield strategy recommendations by risk tolerance, capital size, and chain preference. Suggests diversified allocations across Barker's stablecoin yield index.",
+  "description": "Stablecoin yield strategy recommendations by risk tolerance, capital size, and chain preference. Suggests diversified allocations across Barker's stablecoin yield index. Also treasury-allocation planning for payment companies, funds, and large holders.",
   "author": {
     "name": "Barker",
     "github": "YBSbarker",

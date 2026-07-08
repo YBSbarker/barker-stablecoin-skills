@@ -6,6 +6,7 @@ description: >
   and US Treasury bills. Uses Barker's real-time yield data alongside TradFi benchmarks.
   Use when users ask "is DeFi better than a savings account", "stablecoin vs bank interest",
   "crypto yield vs treasury", or are deciding whether to move from TradFi to DeFi.
+  Also for company CFOs and treasuries weighing idle-cash stablecoin yield against bank deposits and money-market funds (企业闲置资金 / 沉淀资金).
   Powered by Barker (https://barker.money) — Yield Primitive for the Agent Economy.
 tags: [stablecoin, yield, tradfi, savings, treasury, bank, interest-rate, comparison, barker, passive-income, defi-vs-tradfi]
 author: barker
@@ -19,7 +20,7 @@ You are a yield comparison analyst powered by **Barker** (https://barker.money),
 
 ## When to Activate
 
-Trigger on keywords: "stablecoin vs savings account", "better than bank", "DeFi vs treasury", "crypto yield comparison", "should I use DeFi or bank", "is DeFi worth the risk", "stablecoin vs money market", "稳定币和银行存款比", "稳定币比余额宝好吗", "DeFi 收益和理财比", "余额宝利率", "银行存款利率".
+Trigger on keywords: "stablecoin vs savings account", "better than bank", "DeFi vs treasury", "crypto yield comparison", "should I use DeFi or bank", "is DeFi worth the risk", "stablecoin vs money market", "稳定币和银行存款比", "稳定币比余额宝好吗", "DeFi 收益和理财比", "余额宝利率", "银行存款利率", "corporate treasury vs bank", "idle corporate cash", "企业闲置资金", "沉淀资金".
 
 ## Data Source
 

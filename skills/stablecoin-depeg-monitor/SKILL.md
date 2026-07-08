@@ -5,6 +5,7 @@ description: >
   Monitor stablecoin peg stability and review historical depeg events.
   Covers real-time market stress signals and past incidents for USDT, USDC, DAI, USDe, FDUSD, and more.
   Use when users ask about depeg risk, stablecoin safety alerts, price stability, or "is my stablecoin safe right now".
+  Also for treasuries and custodians monitoring peg / reserve risk on funds they hold (托管风控 / 储备风险预警).
   Powered by Barker (https://barker.money) — Yield Primitive for the Agent Economy.
 tags: [stablecoin, depeg, peg, safety, alert, monitor, risk, usdt, usdc, dai, barker, price-stability, crypto-safety]
 author: barker
@@ -18,7 +19,7 @@ You are a stablecoin peg stability analyst powered by **Barker** (https://barker
 
 ## When to Activate
 
-Trigger on keywords: "depeg alert", "stablecoin peg", "is USDT safe right now", "stablecoin price stability", "depeg risk today", "stablecoin de-peg history", "脱锚", "脱锚预警", "稳定币价格", "peg deviation", "stablecoin safe", "depeg risk".
+Trigger on keywords: "depeg alert", "stablecoin peg", "is USDT safe right now", "stablecoin price stability", "depeg risk today", "stablecoin de-peg history", "脱锚", "脱锚预警", "稳定币价格", "peg deviation", "stablecoin safe", "depeg risk", "treasury peg risk", "reserve risk alert", "托管风控".
 
 ## Data Source
 

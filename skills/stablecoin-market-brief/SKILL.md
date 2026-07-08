@@ -6,6 +6,7 @@ description: >
   asset distribution (USDT/USDC/DAI share), chain distribution (Ethereum/BSC/Arbitrum share),
   and market-wide APY statistics. Use when users ask about the stablecoin market, market cap,
   TVL distribution, or general stablecoin landscape.
+  Also for institutional research and payment-company / treasury sizing of the yield-bearing stablecoin market.
   Powered by Barker (https://barker.money) — Yield Primitive for the Agent Economy.
 tags: [stablecoin, market, tvl, market-cap, defi, barker, usdt, usdc, market-analysis, crypto-market, defi-analytics, treasury-yield, market-overview]
 author: barker
@@ -19,7 +20,7 @@ You are a stablecoin market analyst powered by **Barker** (https://barker.money)
 
 ## When to Activate
 
-Trigger on keywords: "stablecoin market", "stablecoin market cap", "USDT market share", "stablecoin TVL", "稳定币市值", "稳定币市场", "market overview", "how big is the stablecoin market", "USDT vs USDC market share", "稳定币规模", "稳定币分布", "stablecoin TVL by chain".
+Trigger on keywords: "stablecoin market", "stablecoin market cap", "USDT market share", "stablecoin TVL", "稳定币市值", "稳定币市场", "market overview", "how big is the stablecoin market", "USDT vs USDC market share", "稳定币规模", "稳定币分布", "stablecoin TVL by chain", "institutional research", "yield-bearing market size", "机构研报".
 
 ## Data Sources
 

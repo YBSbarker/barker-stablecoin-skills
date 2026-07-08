@@ -17,7 +17,7 @@ Powered by [**Barker — Yield Primitive for the Agent Economy**](https://barker
 ### One-line install (recommended)
 
 ```bash
-# Install all 7 skills into ~/.claude/skills/
+# Install all 8 skills into ~/.claude/skills/
 npx @barkermoney/skills install --all
 
 # Or pick specific ones
@@ -101,6 +101,7 @@ Point your host at Barker's remote MCP at **`mcp.barker.money`** — the skill S
 | [stablecoin-depeg-monitor](./skills/stablecoin-depeg-monitor/) | Peg stability monitoring + historical depeg database | `barker_market_overview` + curated history | "depeg alert", "is my stablecoin safe right now" |
 | [stablecoin-yield-vs-tradfi](./skills/stablecoin-yield-vs-tradfi/) | Stablecoin yields vs bank savings, Treasury, money market | `barker_market_trend` | "stablecoin vs savings account", "DeFi vs treasury" |
 | [stablecoin-chain-explorer](./skills/stablecoin-chain-explorer/) | TVL distribution and best yields by blockchain | `barker_market_overview` + `barker_defi_vaults` | "which chain for stablecoins", "Arbitrum stablecoin APY" |
+| [agent-payment-stats](./skills/agent-payment-stats/) | Cross-protocol agent-economy payment metrics (x402 real vs nominal, top sellers) | `barker_agent_payment_stats` | "x402 volume", "agent economy metrics" |
 
 ---
 

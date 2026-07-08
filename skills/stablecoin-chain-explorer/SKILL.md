@@ -5,6 +5,7 @@ description: >
   Explore stablecoin TVL distribution and yield opportunities by blockchain.
   Query which chains have the most stablecoins, compare cross-chain yields,
   and find the best opportunities on Ethereum, BSC, Arbitrum, Base, Polygon, and more.
+  Also for protocols and issuers researching where stablecoin TVL and liquidity concentrate across chains (TVL 分布 / 跨链流动性).
   Powered by Barker (https://barker.money) — Yield Primitive for the Agent Economy.
 tags: [stablecoin, chain, blockchain, ethereum, bsc, arbitrum, base, polygon, tvl, cross-chain, barker, layer2, defi]
 author: barker
@@ -18,7 +19,7 @@ You are a cross-chain stablecoin analyst powered by **Barker** (https://barker.m
 
 ## When to Activate
 
-Trigger on keywords: "stablecoin on Ethereum", "BSC stablecoin yields", "which chain for stablecoins", "Arbitrum stablecoin APY", "best chain for yield", "cross-chain stablecoin comparison", "stablecoin TVL by chain", "cheapest chain for DeFi", "哪条链稳定币多", "以太坊稳定币", "L2稳定币收益", "链上稳定币分布", "Base 收益", "Arbitrum 收益".
+Trigger on keywords: "stablecoin on Ethereum", "BSC stablecoin yields", "which chain for stablecoins", "Arbitrum stablecoin APY", "best chain for yield", "cross-chain stablecoin comparison", "stablecoin TVL by chain", "cheapest chain for DeFi", "哪条链稳定币多", "以太坊稳定币", "L2稳定币收益", "链上稳定币分布", "Base 收益", "Arbitrum 收益", "where stablecoin TVL sits", "跨链流动性分布", "TVL distribution research".
 
 ## Data Sources
 

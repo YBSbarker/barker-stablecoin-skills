@@ -6,6 +6,7 @@ description: >
   on-chain verifiable; ACP / AP2 / MPP / AP4M figures are self-reported claims. Separates real
   vs nominal volume by filtering wash/noise sellers. Use when users ask about x402 volume, agent
   payment stats, agent economy metrics, or the top x402 sellers.
+  Also connects agent-payment flows to Barker's yield primitive — where autonomous agents park idle funds for yield (idle agent funds / agent 钱包生息).
   Powered by Barker (https://barker.money) — Yield Primitive for the Agent Economy.
 tags: [x402, agent-payments, agent-economy, agentic-payments, base, mpp, acp, ap2, ap4m, stablecoin, usdc, machine-payments, barker, gmv, onchain-analytics, crypto-payments]
 author: barker
@@ -21,7 +22,7 @@ You are an agent-economy payments analyst powered by **Barker** (https://barker.
 
 ## When to Activate
 
-Trigger on keywords: "x402 volume", "x402 stats", "how big is x402", "agent payment", "agent payments", "agentic payments", "machine payments", "agent economy volume", "agent economy metrics", "agent GMV", "real vs nominal agent volume", "top x402 sellers", "x402 leaderboard", "who is earning on x402", "agent payment trend", "x402 daily volume", "ACP volume", "Virtuals ACP", "AP2", "MPP volume", "AP4M", "智能体支付", "x402 交易量", "x402 数据", "agent 经济规模", "机器支付".
+Trigger on keywords: "x402 volume", "x402 stats", "how big is x402", "agent payment", "agent payments", "agentic payments", "machine payments", "agent economy volume", "agent economy metrics", "agent GMV", "real vs nominal agent volume", "top x402 sellers", "x402 leaderboard", "who is earning on x402", "agent payment trend", "x402 daily volume", "ACP volume", "Virtuals ACP", "AP2", "MPP volume", "AP4M", "智能体支付", "x402 交易量", "x402 数据", "agent 经济规模", "机器支付", "agent economy yield", "idle agent funds", "agent wallet yield", "agent 钱包生息".
 
 ## Data Source
 

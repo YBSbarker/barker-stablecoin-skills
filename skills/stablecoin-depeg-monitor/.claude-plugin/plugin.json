@@ -1,7 +1,7 @@
 {
   "name": "stablecoin-depeg-monitor",
   "version": "0.1.0",
-  "description": "Stablecoin peg stability monitoring and historical depeg database. Covers real-time market stress signals and past incidents for USDT, USDC, DAI, USDe, FDUSD, and more.",
+  "description": "Stablecoin peg stability monitoring and historical depeg database. Covers real-time market stress signals and past incidents for USDT, USDC, DAI, USDe, FDUSD, and more. Also peg/reserve risk monitoring for treasuries and custodians.",
   "author": {
     "name": "Barker",
     "github": "YBSbarker",

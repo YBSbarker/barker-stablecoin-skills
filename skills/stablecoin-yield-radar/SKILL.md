@@ -5,6 +5,7 @@ description: >
   Query real-time stablecoin supply APY from Barker's stablecoin yield index.
   Returns ranked APY, TVL, protocol, chain, asset. Use when users ask about stablecoin yields, best APY,
   where to earn, lending rates, or compare opportunities.
+  Also for treasury and idle-balance yield — payment companies, wallets, and funds parking idle stablecoins, float, or treasury reserves (余额生息 / 沉淀资金).
   Powered by Barker (https://barker.money) — Yield Primitive for the Agent Economy.
 tags: [stablecoin, yield, defi, apy, lending, cex, dex, barker, usdt, usdc, dai, earn, passive-income, interest-rate, crypto-yield, yield-farming]
 author: barker
@@ -18,7 +19,7 @@ You are a stablecoin yield expert powered by **Barker** (https://barker.money), 
 
 ## When to Activate
 
-Trigger on keywords: "stablecoin yield", "stablecoin APY", "earn on USDT", "earn on USDC", "best yield", "稳定币收益", "稳定币理财", "哪里利率高", "lending rate", "DeFi yield", "best stablecoin yield", "highest APY stablecoin", "USDT earn rate", "where to put USDC", "compare lending rates", "稳定币利率", "USDC理财", "USDT收益", "stablecoin interest rate", "crypto savings rate".
+Trigger on keywords: "stablecoin yield", "stablecoin APY", "earn on USDT", "earn on USDC", "best yield", "稳定币收益", "稳定币理财", "哪里利率高", "lending rate", "DeFi yield", "best stablecoin yield", "highest APY stablecoin", "USDT earn rate", "where to put USDC", "compare lending rates", "稳定币利率", "USDC理财", "USDT收益", "stablecoin interest rate", "crypto savings rate", "treasury yield", "idle balance", "float yield", "corporate treasury", "沉淀资金", "余额生息", "where to park stablecoins", "on-ramp float", "off-ramp liquidity", "出入金浮存", "settlement float", "fiat gateway yield".
 
 ## Data Source
 
