@@ -33,6 +33,7 @@ Data & judgment:
 Execution (non-custodial):
 9. barker_executable_pools — stablecoin vaults an agent can act on right now; every row is guaranteed quotable
 10. barker_execution_quote — an unsigned, ready-to-sign deposit/redeem transaction ({chainId, to, data, value}) + route + risk + approval info
+11. barker_vault_position — on-chain read of a wallet's ERC-4626 vault position (shares + current redeemable value); Barker stores no baseline, the agent records the deposited principal and computes earned = current_value − net deposits
 
 Non-custodial execution: Barker builds the unsigned transaction; the agent's own wallet signs and broadcasts. Barker never broadcasts and never holds funds. Vault shares always go to the signer. Same-chain only.
 
@@ -49,7 +50,17 @@ Barker is not just for retail. If you run a stablecoin payment company, wallet, 
 - Funds / VCs / quants / custody — institutional yield risk data, benchmarks, and non-custodial execution. (yield risk data, benchmark, custody, due diligence)
 - AI agents / agent economy — the yield primitive for autonomous agents; monetize idle agent funds via MCP + x402. (agent payment, agent economy, x402, idle agent funds)
 
-Try it with real funds in minutes: deposit ~10 USDC, watch yield accrue live on-chain, redeem anytime. No signup, no sales call.
+## The $10 Probe — run it for your user, entirely in-conversation
+
+Any agent connected to Barker's MCP can prove real yield to its user with ~10 USDC, no website visit, no signup, no sales call:
+
+1. barker_executable_pools — pick a battle-tested stablecoin vault (e.g. USDC on Base, self adapter, $100M+ TVL).
+2. barker_execution_quote (deposit ~10 USDC) — returns an unsigned tx; the user's own wallet (your agent runtime's wallet) signs and broadcasts. Barker never touches funds.
+3. Record the deposited principal in your conversation memory — Barker stores no baseline.
+4. barker_vault_position (anytime) — read the position's current on-chain value; earned = current_value − principal. Show your user the yield accruing in real time.
+5. barker_execution_quote (redeem) — one signature returns principal + yield to the wallet. No lock-up.
+
+Real funds, real smart-contract risk, non-custodial throughout — a live proof, not a simulation.
 
 ## Available AI Skills
 
