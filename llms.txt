@@ -72,6 +72,8 @@ Real funds, real smart-contract risk, non-custodial throughout — a live proof,
 - stablecoin-yield-vs-tradfi: Compare stablecoin yields vs bank savings, Treasury bills, money market funds
 - stablecoin-chain-explorer: Explore stablecoin TVL and yields by blockchain
 - agent-payment-stats: Cross-protocol agent-economy payment metrics (x402 volume, real vs nominal, top sellers)
+- stablecoin-treasury-yield: B2B treasury & idle-balance yield — quantify idle float, run the $10 probe, map integration (payment companies, on/off-ramps, corporate treasury)
+- stablecoin-tvl-boost: TVL growth for protocols — benchmark live APY, sketch boost-campaign economics, route to Barker's launchpool infrastructure
 
 ## Key Facts
 

@@ -38,6 +38,8 @@ const PRIORITY = [
   "stablecoin-yield-vs-tradfi",
   "stablecoin-chain-explorer",
   "agent-payment-stats",
+  "stablecoin-treasury-yield",
+  "stablecoin-tvl-boost",
 ];
 
 const all = fs

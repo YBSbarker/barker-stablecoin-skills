@@ -17,7 +17,7 @@ Powered by [**Barker — Yield Primitive for the Agent Economy**](https://barker
 ### One-line install (recommended)
 
 ```bash
-# Install all 8 skills into ~/.claude/skills/
+# Install all 10 skills into ~/.claude/skills/
 npx @barkermoney/skills install --all
 
 # Or pick specific ones
@@ -102,6 +102,8 @@ Point your host at Barker's remote MCP at **`mcp.barker.money`** — the skill S
 | [stablecoin-yield-vs-tradfi](./skills/stablecoin-yield-vs-tradfi/) | Stablecoin yields vs bank savings, Treasury, money market | `barker_market_trend` | "stablecoin vs savings account", "DeFi vs treasury" |
 | [stablecoin-chain-explorer](./skills/stablecoin-chain-explorer/) | TVL distribution and best yields by blockchain | `barker_market_overview` + `barker_defi_vaults` | "which chain for stablecoins", "Arbitrum stablecoin APY" |
 | [agent-payment-stats](./skills/agent-payment-stats/) | Cross-protocol agent-economy payment metrics (x402 real vs nominal, top sellers) | `barker_agent_payment_stats` | "x402 volume", "agent economy metrics" |
+| [stablecoin-treasury-yield](./skills/stablecoin-treasury-yield/) | B2B treasury & idle-balance yield: quantify idle float, run the $10 probe, map integration | `barker_defi_vaults` + execution tools | "idle balance", "treasury yield", "沉淀资金" |
+| [stablecoin-tvl-boost](./skills/stablecoin-tvl-boost/) | TVL growth for protocols: boost campaigns & launchpools (30k+ users, on-chain attribution) | `barker_market_overview` + `barker_defi_vaults` | "grow TVL", "launchpool" |
 
 ---
 
