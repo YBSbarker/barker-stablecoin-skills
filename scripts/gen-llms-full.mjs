@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 /**
- * gen-llms-full.mjs — 由各 skill 的 SKILL.md 重新生成 llms-full.txt。
+ * gen-llms-full.mjs — regenerates llms-full.txt from each skill's SKILL.md.
  *
- * llms-full.txt 是「Full Reference」发现文件（GitHub raw / AI 引擎索引用），
- * = 引言 header + 全部 SKILL.md 拼接。以前手动维护，改 SKILL.md 必漂。
- * 现由 build.sh（含 prepublishOnly）自动调用，保证与 SKILL.md 同步。
+ * llms-full.txt is the "Full Reference" discovery file (for GitHub raw / AI engine
+ * indexing) = intro header + every SKILL.md concatenated. It used to be maintained by
+ * hand, so it drifted whenever a SKILL.md changed. It is now invoked automatically by
+ * build.sh (via prepublishOnly), keeping it in sync with the SKILL.md files.
  *
- * skill 顺序：PRIORITY 里的按既定顺序，其余新 skill 按字母序自动 append。
+ * Skill order: entries in PRIORITY follow the given order; any other new skill is
+ * appended automatically in alphabetical order.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -28,7 +30,8 @@ const HEADER = `# Barker Stablecoin Skills — Full Reference
 > APY and share_pct fields are decimals (0.0523 = 5.23%; 0.4250 = 42.5%) — multiply by 100 for display.
 `;
 
-// 已知 skill 的展示顺序（重要性/主题序，非字母序）。新增 skill 无需改这里，会自动按字母 append。
+// Display order for known skills (importance/topic order, not alphabetical). New skills
+// need no change here — they are appended automatically in alphabetical order.
 const PRIORITY = [
   "stablecoin-yield-radar",
   "stablecoin-market-brief",

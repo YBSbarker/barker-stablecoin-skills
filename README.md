@@ -112,7 +112,7 @@ Point your host at Barker's remote MCP at **`mcp.barker.money`** — the skill S
 Live data and execution are served to agents through Barker's MCP at `mcp.barker.money`. On an HTTP 402 challenge, settle payment (e.g. via an OKX OnchainOS or wallet payment skill) and retry.
 
 ```
-MCP endpoint: https://mcp.barker.money
+MCP endpoint: https://mcp.barker.money/mcp
 Settlement:   USDT0/USDC on X Layer/Base/Ethereum/Polygon/Arbitrum
 ```
 

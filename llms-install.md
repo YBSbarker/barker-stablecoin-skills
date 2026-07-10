@@ -27,11 +27,11 @@ Add a remote (HTTP) MCP server pointing at `https://mcp.barker.money`:
 }
 ```
 
-## Tools (10)
+## Tools (11)
 
 **Data & judgment:** `barker_defi_vaults`, `barker_market_overview`, `barker_market_trend`, `barker_yield_advisor`, `barker_pool_search`, `barker_pool_detail`, `barker_pool_history`, `barker_crosschain_routes`.
 
-**Execution (non-custodial):** `barker_executable_pools`, `barker_execution_quote` — Barker builds an unsigned deposit/redeem transaction; your own wallet signs and broadcasts. Barker never holds funds and never broadcasts; vault shares always go to the signer. Same-chain only.
+**Execution (non-custodial):** `barker_executable_pools`, `barker_execution_quote`, `barker_vault_position` — Barker builds an unsigned deposit/redeem transaction; your own wallet signs and broadcasts. Barker never holds funds and never broadcasts; vault shares always go to the signer. Same-chain only. `barker_vault_position` is a read-only on-chain position (shares + current redeemable value); Barker stores no baseline — the agent records the deposited principal and computes earned = current_value − net deposits.
 
 ---
 

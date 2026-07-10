@@ -2,8 +2,8 @@
 // https://mcp.barker.money — settles via x402 (HTTP 402 challenge).
 //
 // What it does, end to end:
-//   1. Pays $0.005 → barker_executable_pools   (discover pools your agent can act on)
-//   2. Pays $0.01  → barker_execution_quote    (buy an unsigned, ready-to-sign transaction)
+//   1. Pays $0.01  → barker_executable_pools   (discover pools your agent can act on)
+//   2. Pays $0.05  → barker_execution_quote    (buy an unsigned, ready-to-sign transaction)
 //   3. Verifies the quote locally (see SAFETY below), then signs & broadcasts
 //      with YOUR OWN key: ERC-20 approve (exact amount) + vault deposit on Base.
 //   4. Confirms vault shares arrived in your wallet.
@@ -20,7 +20,7 @@
 // Requirements:
 //   node >= 20, `npm i viem`
 //   A wallet holding:
-//     - USDT0 on X Layer (eip155:196)  ≥ $0.02   — pays the two x402 calls
+//     - USDT0 on X Layer (eip155:196)  ≥ $0.07   — pays the two x402 calls
 //     - USDC  on Base    (eip155:8453) ≥ deposit amount (default 1 USDC)
 //     - ETH   on Base                  ≈ $0.05   — gas for approve + deposit
 //
@@ -43,6 +43,8 @@ if (!PRIVATE_KEY?.startsWith("0x")) {
   process.exit(1);
 }
 
+// NOTE: bare host on purpose — this client hits the per-tool x402 REST surface
+// (`GET /<tool_name>`), NOT the MCP protocol endpoint (`POST /mcp`). Do not append /mcp.
 const MCP = process.env.MCP_BASE_URL ?? "https://mcp.barker.money";
 const PAY_NETWORK = process.env.PAY_NETWORK ?? "eip155:196"; // X Layer USDT0 via OKX facilitator
 const POOL_UID = process.env.POOL_UID ?? "morpho-vault_base_usdc_0xbeefa7b8";
@@ -123,14 +125,14 @@ console.log(`buyer/signer: ${account.address}`);
 console.log(`paying on ${PAY_NETWORK} → ${MCP}\n`);
 
 // 1) Discover — every row returned here is guaranteed quotable.
-console.log("① barker_executable_pools ($0.005)");
+console.log("① barker_executable_pools ($0.01)");
 const pools = await paidGet("barker_executable_pools", { asset: "usdc", chain: "base", action: "deposit", limit: "20" });
 const row = pools.data.find((r) => r.pool_uid === POOL_UID);
 if (!row) throw new Error(`${POOL_UID} not in the quotable list — pick one of: ${pools.data.slice(0, 5).map((r) => r.pool_uid).join(", ")}`);
 console.log(`   ✓ target pool listed (adapters=${JSON.stringify(row.adapters)}, is_full=${row.is_full})\n`);
 
 // 2) Buy the unsigned transaction. adapter=self → decodable ERC4626 calldata.
-console.log("② barker_execution_quote ($0.01)");
+console.log("② barker_execution_quote ($0.05)");
 const { quote } = await paidGet("barker_execution_quote", {
   pool_uid: POOL_UID, action: "deposit", adapter: "self",
   amount_base_units: AMOUNT.toString(), signer_address: account.address,

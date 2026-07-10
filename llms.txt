@@ -9,7 +9,7 @@
 Barker is a yield primitive — the default routing layer that any agent (or app, or human) calls when it needs to answer "where should this stablecoin sit?". We index real-time stablecoin yield across every stablecoin and every chain, and add an AI yield advisor, non-custodial execution, and risk signals. Live data and execution are served to autonomous agents through Barker's MCP at mcp.barker.money; humans browse the interactive map at barker.money.
 
 Website: https://barker.money
-Agent MCP: https://mcp.barker.money
+Agent MCP: https://mcp.barker.money/mcp
 Agent discovery: https://api.barker.money/llms.txt
 
 ## Agent access
@@ -87,5 +87,5 @@ Real funds, real smart-contract risk, non-custodial throughout — a live proof,
 ## Contact
 
 Website: https://barker.money
-Agent MCP: https://mcp.barker.money
+Agent MCP: https://mcp.barker.money/mcp
 GitHub: https://github.com/YBSbarker/barker-stablecoin-skills
