@@ -30,7 +30,8 @@ campaign、锁定期、赎回期、活动收益、帮我管理活动。
 
 ### 六个功能的工具组合配方
 
-1. **参与/存入（含定投）**：get_campaign_detail 拿条款 → 查 portfolio（红线：实时）→
+1. **参与/存入（含定投）**：**query_boost_campaigns 拿活动与条款**（含未开始的预告活动；
+   query_active_campaigns 看不到 scheduled 的 boost）→ 查 portfolio（红线：实时）→
    资产不符时先 execution_quote_swap 换币 → **复述条款（锁定期/赎回期/奖励口径/结束时间/金额）
    并获用户明确"确认"** → execution_prepare_vault_action(create_intent=true, campaign_id=活动绑定id)
    → 授权按钮。定投 = save_yield_plan（分期步骤）+ schedule_monitoring_task（每期提醒，
@@ -44,6 +45,12 @@ campaign、锁定期、赎回期、活动收益、帮我管理活动。
 5. **风控盯盘**：set_alert_rule(depeg / apy_below / tvl_change_pct) + schedule_monitoring_task
    (daily/hourly)。触发时**提醒 + 给一键赎回入口**，绝不自动赎回（每笔都要用户当轮确认）。
 6. **日报纳入**：set_digest_settings 开启；日报会带持仓与到期信息。
+
+### 活动未开始（预告期）的正确姿势
+
+query_boost_campaigns 返回 start 在未来 / apy_kind=opening 的活动 = 预告期：如实告知开始时间与
+预期开盘 APY，先搭方案（save_yield_plan）+ 开始提醒（set_alert_rule/schedule），**开始后**再建
+存入凭证。**绝不因 query_active_campaigns 查不到就说活动不存在**。
 
 ### 硬边界（违反即事故）
 
