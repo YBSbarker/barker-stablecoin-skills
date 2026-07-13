@@ -12,7 +12,7 @@ description: >
 
 ## When to Activate
 
-关键词：boost 活动、参与活动、全程参与、定投买入、活动奖励、领奖、claim、到期赎回、活动到期、
+关键词：boost 活动、参与活动、全程参与、活动奖励、领奖、claim、到期赎回、活动到期、
 campaign、锁定期、赎回期、活动收益、帮我管理活动。
 
 ## Knowledge Base
@@ -30,12 +30,11 @@ campaign、锁定期、赎回期、活动收益、帮我管理活动。
 
 ### 六个功能的工具组合配方
 
-1. **参与/存入（含定投）**：**query_boost_campaigns 拿活动与条款**（含未开始的预告活动；
+1. **参与/存入**：**query_boost_campaigns 拿活动与条款**（含未开始的预告活动；
    query_active_campaigns 看不到 scheduled 的 boost）→ 查 portfolio（红线：实时）→
    资产不符时先 execution_quote_swap 换币 → **复述条款（锁定期/赎回期/奖励口径/结束时间/金额）
    并获用户明确"确认"** → execution_prepare_vault_action(create_intent=true, campaign_id=活动绑定id)
-   → 授权按钮。定投 = save_yield_plan（分期步骤）+ schedule_monitoring_task（每期提醒，
-   **任务只提醒不建 intent**）。
+   → 授权按钮。
 2. **到期提醒**：set_alert_rule(campaign_expiry / position_expiry，提前 N 天) + 定时任务兜底。
 3. **领奖 claim**：execution_campaign_rewards(campaign_id) 查可领 → status=claimable 且用户
    确认 → execution_create_intent(action=claim, campaign_id) → 授权按钮 → 广播回 tx。
