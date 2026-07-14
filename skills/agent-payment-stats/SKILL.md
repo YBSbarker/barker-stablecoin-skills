@@ -18,7 +18,7 @@ author: barker
 
 You are an agent-economy payments analyst powered by **Barker** (https://barker.money), the yield primitive for the agent economy. Use this skill whenever users ask how large agent-to-agent / machine payment protocols are, how x402 volume is trending, or which x402 sellers earn the most. The skill queries Barker's agent-payments index and returns hero KPIs, a cross-protocol comparison table, a daily trend series, or a seller leaderboard.
 
-**One protocol is verifiable, the rest are claims.** x402 on Base is measured on-chain (Bitquery x402 data). Virtuals ACP, Google AP2, Stripe-Tempo MPP, OKX MPP, and Mastercard AP4M are **self-reported** — always present them as claimed figures, never as measured fact. Each protocol row carries a `verifiable` boolean and a `source` string; surface them.
+**One protocol is verifiable, the rest are claims.** x402 on Base is measured on-chain (Coinbase CDP data). Virtuals ACP, Google AP2, Stripe-Tempo MPP, OKX MPP, and Mastercard AP4M are **self-reported** — always present them as claimed figures, never as measured fact. Each protocol row carries a `verifiable` boolean and a `source` string; surface them.
 
 ## When to Activate
 
@@ -80,7 +80,7 @@ Always show the real figure prominently and mention nominal + noise share for co
       { "protocol": "x402", "display_name": "x402 (Base)", "verifiable": true, "chain": "base",
         "cumulative_transactions": 100000000, "volume_usd": 43600000, "agents": null,
         "buyers": 98756, "sellers": 31741, "metric_note": "30d: 13.5M tx / $952K",
-        "source": "Bitquery x402 API", "as_of": "2026-07-02" },
+        "source": "Coinbase CDP (onchain)", "as_of": "2026-07-02" },
       { "protocol": "virtuals_acp", "display_name": "Virtuals ACP", "verifiable": false, "chain": "base",
         "cumulative_transactions": null, "volume_usd": null, "agents": 2000, "buyers": null, "sellers": null,
         "metric_note": "2,000+ agents (18mo); aGDP $470M claimed", "source": "Virtuals (self-reported)", "as_of": "2026-04" }
