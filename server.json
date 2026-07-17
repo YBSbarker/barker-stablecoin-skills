@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "money.barker/stablecoin-yield",
-  "description": "Real-time stablecoin yield index + AI advisor + non-custodial deposit/redeem quotes (x402 paid).",
-  "version": "1.0.0",
+  "description": "Barker: real-time stablecoin yield index + AI yield advisor + non-custodial deposit/redeem quotes (x402 pay-per-call).",
+  "version": "1.0.1",
   "websiteUrl": "https://barker.money",
   "repository": {
     "url": "https://github.com/YBSbarker/barker-stablecoin-skills",

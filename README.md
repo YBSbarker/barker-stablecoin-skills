@@ -1,6 +1,6 @@
 # Barker MCP Server — Stablecoin Yield for AI Agents
 
-> **Remote MCP server for real-time stablecoin yield: live APY index, AI yield advisor, risk signals, and non-custodial deposit/redeem execution — 11 tools, x402 pay-per-call. Plus the official Barker agent skill suite.**
+> **Barker — remote MCP server for real-time stablecoin yield: live APY index, AI yield advisor, risk signals, and non-custodial deposit/redeem execution — 11 tools, x402 pay-per-call. Plus the official Barker agent skill suite.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-money.barker%2Fstablecoin--yield-blue.svg)](https://registry.modelcontextprotocol.io)
