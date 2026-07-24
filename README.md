@@ -28,6 +28,14 @@ Transport: streamable-http (stateless)
 claude mcp add --transport http barker https://mcp.barker.money/mcp
 ```
 
+**Hermes Agent** — add to `~/.hermes/config.yaml` (takes effect in new sessions):
+
+```yaml
+mcp_servers:
+  barker:
+    url: "https://mcp.barker.money/mcp"
+```
+
 **Cursor / Cline / any MCP host** — add to your MCP config:
 
 ```json
@@ -157,6 +165,22 @@ npm install -g @barkermoney/skills
 skills install --all     # then from any directory
 skills update            # later, pull latest skill content
 ```
+
+### Hermes Agent
+
+Skills in this repo follow the [agentskills.io](https://agentskills.io) open standard, so they install into [Hermes Agent](https://github.com/NousResearch/hermes-agent) as-is:
+
+```bash
+# Flagship skill straight from this repo (repeat for any skill under ./skills):
+hermes skills install https://raw.githubusercontent.com/YBSbarker/barker-stablecoin-skills/main/skills/stablecoin-yield-radar/SKILL.md --name stablecoin-yield-radar
+hermes skills install https://raw.githubusercontent.com/YBSbarker/barker-stablecoin-skills/main/skills/yield-strategy-advisor/SKILL.md --name yield-strategy-advisor
+
+# Or install the whole suite manually:
+git clone https://github.com/YBSbarker/barker-stablecoin-skills.git
+cp -r barker-stablecoin-skills/skills/* ~/.hermes/skills/
+```
+
+Skills take effect in new Hermes sessions. Pair them with the remote MCP endpoint (see [Connect](#connect-remote-mcp)) so tool calls resolve. Hermes has no built-in payments: route the x402 pay-per-call through an x402-capable payment skill, funded from a **dedicated low-balance payments wallet** — never your main wallet key. `tools/list` and discovery stay free.
 
 ### Other install channels
 
